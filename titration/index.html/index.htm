@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titration Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Titration Simulator</h1>
+
+        <div class="input-section">
+            <label>Acid Concentration (M)</label>
+            <input id="acid" type="number" step="0.01" value="0.1">
+
+            <label>Acid Volume (mL)</label>
+            <input id="acidVol" type="number" step="1" value="25">
+
+            <label>Base Concentration (M)</label>
+            <input id="base" type="number" step="0.01" value="0.1">
+
+            <button onclick="simulate()">Run Simulation</button>
+        </div>
+
+        <div class="results">
+            <h2>Results</h2>
+            <p id="eqPoint">Equivalence Point: —</p>
+            <p id="pH">pH at Equivalence: —</p>
+        </div>
+
+        <canvas id="chart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
